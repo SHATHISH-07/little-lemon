@@ -52,6 +52,7 @@ function BookingForm(props) {
             <div>
               <label htmlFor="guests">Number of Guests:</label>
               <input
+                type="number"
                 id="book-guest"
                 min="1"
                 value={guests}
