@@ -38,7 +38,7 @@ function BookingForm(props) {
               <label htmlFor="book-time">Choose Time:</label>
               <select
                 id="book-time"
-                vlaue={times}
+                value={times}
                 onChange={(e) => setTimes(e.target.value)}
               >
                 <option value="">Select a time</option>
