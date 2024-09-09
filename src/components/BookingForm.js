@@ -5,6 +5,10 @@ function BookingForm(props) {
   const [times, setTimes] = useState("");
   const [guests, setGuests] = useState("");
   const [occasion, setOccasion] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [notes, setNotes] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,6 +25,43 @@ function BookingForm(props) {
       <section>
         <form onSubmit={handleSubmit}>
           <fieldset>
+            {/* First name and last name */}
+
+            <div>
+              <label htmlFor="firstName">First Name:</label>
+              <input
+                type="text"
+                min="4"
+                id="customer-fname"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+              />
+              <label htmlFor="firstName">Last Name:</label>
+              <input
+                type="text"
+                min="4"
+                id="customer-lname"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+              />
+            </div>
+
+            {/* Email */}
+
+            <div>
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+
+            {/* Choose date */}
+
             <div>
               <label htmlFor="book-date">Choose Date:</label>
               <input
@@ -53,7 +94,7 @@ function BookingForm(props) {
               <label htmlFor="guests">Number of Guests:</label>
               <input
                 type="number"
-                id="book-guest"
+                id="book-guests"
                 min="1"
                 value={guests}
                 onChange={(e) => setGuests(e.target.value)}

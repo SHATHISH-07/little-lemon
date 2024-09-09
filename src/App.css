@@ -137,7 +137,10 @@ label {
 #book-date,
 #book-time,
 #book-guests,
-#book-occasion {
+#book-occasion,
+#customer-fname,
+#customer-lname,
+#email {
   background: #bdbdbd43;
   padding: 8px 24px;
   border: none;
