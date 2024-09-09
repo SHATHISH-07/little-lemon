@@ -8,7 +8,6 @@ function BookingForm(props) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [notes, setNotes] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
